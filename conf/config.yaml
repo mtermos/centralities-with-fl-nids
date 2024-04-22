@@ -1,0 +1,10 @@
+multi_class: False
+with_network_features: False
+n_clients: 5
+n_rounds: 20
+
+config_fit: # a config that each client will receive (this is send by the server) when they are sampled. This allows you to dynamically configure the training on the client side as the simulation progresses
+  lr: 0.01 # learning rate to use by the clients
+  momentum: 0.9 # momentum used by SGD optimiser on the client side
+  local_epochs: 1 # number of training epochs each clients does in a fit() round
+  batch_size: 256
